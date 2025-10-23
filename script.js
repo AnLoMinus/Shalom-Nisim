@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Form functionality
-function saveForm() {
+function saveForm(showAlert = true) {
   const form = document.getElementById("focusForm");
   if (form) {
     const formData = new FormData(form);
@@ -41,7 +41,11 @@ function saveForm() {
     }
 
     localStorage.setItem("torahLessonForm", JSON.stringify(data));
-    alert("הטופס נשמר בהצלחה!");
+    if (showAlert) {
+      alert("הטופס נשמר בהצלחה!");
+    } else {
+      showSaveIndicator();
+    }
   }
 }
 
@@ -77,7 +81,7 @@ function printForm() {
 }
 
 // Sermon functionality
-function saveSermon() {
+function saveSermon(showAlert = true) {
   const sermonData = {
     outstandingTrait: document.getElementById("outstanding_trait")?.value || "",
     characteristicMoment:
@@ -89,7 +93,11 @@ function saveSermon() {
   };
 
   localStorage.setItem("torahLessonSermon", JSON.stringify(sermonData));
-  alert("הדרשה נשמרה בהצלחה!");
+  if (showAlert) {
+    alert("הדרשה נשמרה בהצלחה!");
+  } else {
+    showSaveIndicator();
+  }
 }
 
 function clearSermon() {
@@ -155,18 +163,71 @@ function printPage() {
   window.print();
 }
 
-// Auto-save functionality
+// Auto-save functionality with debounce
+let saveTimeout;
+let saveIndicator;
+
+function showSaveIndicator() {
+  // Remove existing indicator if any
+  if (saveIndicator) {
+    saveIndicator.remove();
+  }
+
+  // Create save indicator
+  saveIndicator = document.createElement("div");
+  saveIndicator.innerHTML = "💾 נשמר אוטומטית";
+  saveIndicator.style.cssText = `
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  `;
+
+  document.body.appendChild(saveIndicator);
+
+  // Show indicator
+  setTimeout(() => {
+    saveIndicator.style.opacity = "1";
+  }, 10);
+
+  // Hide indicator after 2 seconds
+  setTimeout(() => {
+    if (saveIndicator) {
+      saveIndicator.style.opacity = "0";
+      setTimeout(() => {
+        if (saveIndicator) {
+          saveIndicator.remove();
+          saveIndicator = null;
+        }
+      }, 300);
+    }
+  }, 2000);
+}
+
 function autoSave() {
   const forms = document.querySelectorAll("form");
   forms.forEach((form) => {
     const inputs = form.querySelectorAll("input, textarea, select");
     inputs.forEach((input) => {
       input.addEventListener("input", function () {
-        if (form.id === "focusForm") {
-          saveForm();
-        } else if (window.location.pathname.includes("sermon")) {
-          saveSermon();
-        }
+        // Clear existing timeout
+        clearTimeout(saveTimeout);
+
+        // Set new timeout for auto-save (1 second delay)
+        saveTimeout = setTimeout(() => {
+          if (form.id === "focusForm") {
+            saveForm(false); // Save without alert (includes showSaveIndicator)
+          } else if (window.location.pathname.includes("sermon")) {
+            saveSermon(false); // Save without alert (includes showSaveIndicator)
+          }
+        }, 1000);
       });
     });
   });
