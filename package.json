@@ -1,0 +1,36 @@
+{
+  "name": "Shalom-Nisim",
+  "version": "1.0.0",
+  "description": "מאגר שיעור תורה לזכר נשמת שלום בן ויקי - אתר מקיף לבניית שיעורי תורה, דרשות ומקורות השראה רוחניים",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "python -m http.server 8000",
+    "build": "echo 'No build process needed for static site'",
+    "deploy": "echo 'Ready for GitHub Pages deployment'"
+  },
+  "keywords": [
+    "torah",
+    "memorial",
+    "hebrew",
+    "jewish",
+    "sermon",
+    "spiritual",
+    "תורה",
+    "זכרון",
+    "דרשה",
+    "רוחניות"
+  ],
+  "author": "Torah Lesson Memorial Project",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AnLoMinus/Shalom-Nisim.git"
+  },
+  "homepage": "https://anlominus.github.io/Shalom-Nisim",
+  "devDependencies": {},
+  "dependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

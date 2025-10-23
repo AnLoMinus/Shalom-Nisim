@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shalom-Nisim: 🕯️ טופס מיקוד - שיעור תורה לזכר נשמת שלום בן ויקי</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="main-title">🕯️ טופס מיקוד לבניית שיעור תורה</h1>
+            <p class="subtitle">לזכר ולעילוי נשמת שלום בן ויקי ז"ל</p>
+        </div>
+    </header>
+
+    <nav class="navigation">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link">🏠 דף הבית</a></li>
+                <li><a href="form.html" class="nav-link active">🕯️ טופס מיקוד</a></li>
+                <li><a href="planning.html" class="nav-link">📜 תכנון השיעור</a></li>
+                <li><a href="sermon.html" class="nav-link">🕊️ דרשה מוכנה</a></li>
+                <li><a href="quotes.html" class="nav-link">✨ ליקוט ציטוטים</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="form-container">
+                <h2>🕯️ טופס מיקוד לבניית שיעור תורה לעילוי נשמת שלום בן ויקי</h2>
+                <p class="form-intro">
+                    📅 תאריך לועזי: 23.10.2025 | 🕰️ שעה: 15:00 | 📅 תאריך עברי: כ״ט בתשרי ה׳תשפ״ו
+                </p>
+                <p class="form-intro">
+                    ✨ "וְצַדִּיק בֶּאֱמוּנָתוֹ יִחְיֶה" (חבקוק ב׳, ד׳)
+                </p>
+
+                <form id="focusForm" class="form">
+                    <!-- חלק א׳ – שאלות על חייו ודרכו של המנוח -->
+                    <div class="form-section">
+                        <h3>🪔 חלק א׳ – שאלות על חייו ודרכו של המנוח:</h3>
+
+                        <div class="form-group">
+                            <label for="values">1. אילו ערכים אפיינו את שלום בן ויקי בחייו?</label>
+                            <textarea id="values" name="values" placeholder="תאר את הערכים החשובים לו..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="important">2. מה היה חשוב לו במיוחד — אמונה, חסד, תפילה, לימוד תורה, אהבת
+                                הזולת?</label>
+                            <textarea id="important" name="important"
+                                placeholder="ספר על הדברים החשובים לו..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="favorite_verse">3. האם היה לו פסוק אהוב, תפילה קבועה או נושא תורני שחזר
+                                עליו?</label>
+                            <textarea id="favorite_verse" name="favorite_verse" placeholder="אם כן, פרט..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="synagogue_connection">4. מה היה הקשר שלו לבית הכנסת או לשיעורי תורה?</label>
+                            <textarea id="synagogue_connection" name="synagogue_connection"
+                                placeholder="תאר את הקשר שלו..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="good_deeds">5. האם יש מעשה טוב שהוא עשה באופן קבוע וראוי להמשיך אותו?</label>
+                            <textarea id="good_deeds" name="good_deeds"
+                                placeholder="ספר על מעשים טובים שלו..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- חלק ב׳ – כיוון רוחני של השיעור -->
+                    <div class="form-section">
+                        <h3>📖 חלק ב׳ – כיוון רוחני של השיעור:</h3>
+
+                        <div class="form-group">
+                            <label for="lesson_type">6. האם השיעור יעסוק באמונה וביטחון, בהלכה, במוסר, בקבלה או
+                                בשילוב?</label>
+                            <select id="lesson_type" name="lesson_type">
+                                <option value="">בחר כיוון...</option>
+                                <option value="faith">אמונה וביטחון</option>
+                                <option value="halacha">הלכה</option>
+                                <option value="morals">מוסר</option>
+                                <option value="kabbalah">קבלה</option>
+                                <option value="combination">שילוב</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="psalm_chapter">7. האם יש פרק תהילים מסוים שמזוהה עם נשמתו או עם התקופה?</label>
+                            <input type="text" id="psalm_chapter" name="psalm_chapter" placeholder="אם כן, איזה פרק?">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="afterlife_focus">8. האם רוצים להתמקד בנושא של "חיים אחרי החיים" ותחיית
+                                המתים?</label>
+                            <select id="afterlife_focus" name="afterlife_focus">
+                                <option value="">בחר...</option>
+                                <option value="yes">כן</option>
+                                <option value="no">לא</option>
+                                <option value="partial">חלקית</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="connect_personality">9. האם רוצים לחבר את דמותו לערכים נצחיים מהתורה?</label>
+                            <select id="connect_personality" name="connect_personality">
+                                <option value="">בחר...</option>
+                                <option value="yes">כן</option>
+                                <option value="no">לא</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="charity_mention">10. האם יש בקשה להזכיר מעשי חסד שיכולים להיות השראה לדורות
+                                הבאים?</label>
+                            <textarea id="charity_mention" name="charity_mention"
+                                placeholder="אם כן, פרט..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- חלק ג׳ – מבנה השיעור -->
+                    <div class="form-section">
+                        <h3>🪶 חלק ג׳ – מבנה השיעור:</h3>
+
+                        <div class="form-group">
+                            <label for="lesson_duration">11. משך השיעור הרצוי:</label>
+                            <input type="text" id="lesson_duration" name="lesson_duration"
+                                placeholder="למשל: 45 דקות, שעה וחצי...">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="psalm_opening">12. פתיחה עם פרק תהילים? (אם כן – איזה?)</label>
+                            <input type="text" id="psalm_opening" name="psalm_opening" placeholder="אם כן, איזה פרק?">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="personal_story">13. שילוב סיפור חיים אישי או דרשה תורנית בלבד?</label>
+                            <select id="personal_story" name="personal_story">
+                                <option value="">בחר...</option>
+                                <option value="personal">סיפור חיים אישי</option>
+                                <option value="sermon">דרשה תורנית בלבד</option>
+                                <option value="both">שילוב של שניהם</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="instructor">14. מי יעביר את השיעור?</label>
+                            <input type="text" id="instructor" name="instructor" placeholder="שם הרב או המנחה...">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="family_speakers">15. האם יינתנו דברי קרובים וחברים?</label>
+                            <select id="family_speakers" name="family_speakers">
+                                <option value="">בחר...</option>
+                                <option value="yes">כן</option>
+                                <option value="no">לא</option>
+                                <option value="limited">מוגבל</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- חלק ד׳ – אווירה וייעוד -->
+                    <div class="form-section">
+                        <h3>🌿 חלק ד׳ – אווירה וייעוד:</h3>
+
+                        <div class="form-group">
+                            <label for="atmosphere">16. אווירה מבוקשת:</label>
+                            <select id="atmosphere" name="atmosphere">
+                                <option value="">בחר...</option>
+                                <option value="strengthening">חיזוק</option>
+                                <option value="comfort">נחמה</option>
+                                <option value="inspiration">השראה</option>
+                                <option value="combination">שילוב</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="music">17. שילוב ניגון / פיוט / שיר נשמה?</label>
+                            <input type="text" id="music" name="music" placeholder="אם כן, איזה?">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="location">18. מקום השיעור:</label>
+                            <input type="text" id="location" name="location" placeholder="בית כנסת, בית, אולם...">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tradition">19. מסורת שנתית או חד-פעמית?</label>
+                            <select id="tradition" name="tradition">
+                                <option value="">בחר...</option>
+                                <option value="annual">שנתית</option>
+                                <option value="one_time">חד-פעמית</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="charity_dedication">20. האם יוקדש צדקה או מצווה לעילוי נשמתו במהלך
+                                השיעור?</label>
+                            <select id="charity_dedication" name="charity_dedication">
+                                <option value="">בחר...</option>
+                                <option value="yes">כן</option>
+                                <option value="no">לא</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- כפתור שליחה -->
+                    <div class="form-actions">
+                        <button type="submit" class="btn">💾 שמור טופס</button>
+                        <button type="button" class="btn" onclick="printForm()">🖨️ הדפס טופס</button>
+                        <button type="button" class="btn" onclick="clearForm()">🗑️ נקה טופס</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>🌿 "כִּי עִמְּךָ מְקוֹר חַיִּים בְּאוֹרְךָ נִרְאֶה אוֹר" (תהילים ל״ו, י׳)</p>
+            <p>לזכר ולעילוי נשמת שלום בן ויקי ז"ל</p>
+            <div class="footer-links">
+                <a href="https://github.com/AnLoMinus/Shalom-Nisim" target="_blank" class="footer-link">📁 מאגר
+                    GitHub</a>
+                <a href="https://github.com/AnLoMinus/Shalom-Nisim/archive/refs/heads/main.zip" class="footer-link">📦
+                    הורדת ZIP</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
